@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<title>Suunnittele Cocktail</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Cocktail Designer</h1>
+</header>
+
+<div class="card">
+<h2>Valitse alkoholi</h2>
+<select id="alcohol">
+<option>Vodka</option>
+<option>Gin</option>
+<option>Rommi</option>
+<option>Tequila</option>
+<option>Viski</option>
+</select>
+
+<h2>Valitse maku</h2>
+<select id="taste">
+<option>Makea</option>
+<option>Hapan</option>
+<option>Molemmat</option>
+</select>
+
+<button onclick="generateCocktail()">Luo Cocktail</button>
+
+<div id="result"></div>
+</div>
+
+<div class="card">
+<h2>Arvostele juomasi</h2>
+<div class="stars">
+<span onclick="rate(1)">★</span>
+<span onclick="rate(2)">★</span>
+<span onclick="rate(3)">★</span>
+<span onclick="rate(4)">★</span>
+<span onclick="rate(5)">★</span>
+</div>
+</div>
+
+<nav>
+<a href="index.html">Etusivulle</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

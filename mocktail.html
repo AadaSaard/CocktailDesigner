@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<title>Mocktail Designer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Mocktail Designer</h1>
+</header>
+
+<div class="card">
+<h2>Valitse alkoholiton spirit</h2>
+<select id="spirit">
+<option>Vodka</option>
+<option>Rommi</option>
+<option>Tequila</option>
+<option>Viski</option>
+<option>Gin</option>
+</select>
+
+<h2>Valitse makuprofiili</h2>
+<select id="taste">
+<option>Makea</option>
+<option>Hapan</option>
+<option>Raikas</option>
+</select>
+
+<button onclick="generateCocktail()">Luo Mocktail</button>
+
+<div id="result"></div>
+</div>
+
+<div class="card">
+<h2>Arvostele juomasi</h2>
+<div class="stars">
+<span onclick="rate(1)">★</span>
+<span onclick="rate(2)">★</span>
+<span onclick="rate(3)">★</span>
+<span onclick="rate(4)">★</span>
+<span onclick="rate(5)">★</span>
+</div>
+
+<nav>
+<a href="index.html">Etusivulle</a>
+</nav>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
