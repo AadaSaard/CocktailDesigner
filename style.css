@@ -11,128 +11,105 @@ body {
 }
 
 header {
-    padding: 16px;
-    background-color: #ff66c4;
-    animation: fadeIn 1s ease-in-out;
+    padding: 20px;
 }
 
 h1 {
     font-family: 'Homemade Apple', cursive;
-    font-size: 32px;
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 h2 {
     font-family: 'Belleza', sans-serif;
+    font-size: 26px;
 }
 
 nav {
-    margin: 20px 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 nav a {
     display: block;
-    margin: 10px auto;
-    padding: 14px;
-    width: 90%;
-    max-width: 320px;
+    width: 100%;
+    padding: 18px;
+    margin: 12px 0;
+    font-size: 20px;
     background-color: #24df30;
     color: white;
     text-decoration: none;
-    border-radius: 12px;
-    transition: 0.3s;
+    border-radius: 14px;
 }
 
-nav a:hover {
-    background-color: black;
-    transform: scale(1.05);
+nav a:active {
+    transform: scale(0.98);
 }
 
 .card {
-    background-color: rgba(0,0,0,0.2);
     margin: 15px;
-    padding: 18px;
+    padding: 20px;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.25);
     border-radius: 15px;
-    backdrop-filter: blur(5px);
-    animation: fadeIn 1s ease-in-out;
 }
 
 button {
-    background-color: #ff66c4;
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 12px;
     border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
+    background-color: #ff66c4;
 }
 
 select, input, textarea {
-    padding: 10px;
-    border-radius: 10px;
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    margin: 10px 0;
+    border-radius: 12px;
     border: none;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 400px;
-    display: block;
+    box-sizing: border-box;
 }
 
 .stars span {
-    font-size: 28px;
-    cursor: pointer;
-    color: gray;
+    font-size: 40px;
 }
 
 .stars .active {
     color: gold;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-
 /* TABLET */
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 
-    h1 {
-        font-size: 40px;
+    nav {
+        max-width: 700px;
+        margin: auto;
     }
 
     nav a {
-        display: inline-block;
-        width: 200px;
-        margin: 8px;
-    }
-
-    .card {
-        max-width: 600px;
-        margin: 20px auto;
-    }
-}
-
-
-/* DESKTOP */
-
-@media (min-width: 900px) {
-
-    h1 {
-        font-size: 45px;
-    }
-
-    nav {
-        max-width: 800px;
-        margin: 20px auto;
+        font-size: 18px;
     }
 
     .card {
         max-width: 700px;
+        margin: 20px auto;
     }
 
 }
 
+/* DESKTOP */
+
+@media (min-width: 1000px) {
+
+    nav a {
+        display: inline-block;
+        width: 220px;
+        margin: 10px;
+    }
+
+}
