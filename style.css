@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Belleza&family=Neuton:wght@400;700&display=swap');
 
-
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
-
 
 body {
     font-family: 'Neuton', serif;
@@ -15,55 +13,54 @@ body {
     text-align: center;
 }
 
-
+/* Fluid container padding */
 .container {
-    max-width: 520px;
+    max-width: 90%;
     margin: 0 auto;
-    padding: 30px 20px 40px 20px;
+    padding: clamp(20px, 3vw, 40px) clamp(15px, 2vw, 20px);
 }
 
-
+/* Headers */
 header {
-    margin-bottom: 35px;
+    margin-bottom: clamp(25px, 3vw, 35px);
 }
 
 h1 {
     font-family: 'Homemade Apple', cursive;
-    font-size: 42px;
-    margin-bottom: 15px;
+    font-size: clamp(28px, 6vw, 42px);
+    margin-bottom: clamp(10px, 1.5vw, 15px);
 }
 
 h2 {
     font-family: 'Belleza', sans-serif;
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: clamp(18px, 4vw, 26px);
+    margin-bottom: clamp(8px, 1vw, 10px);
 }
 
 header p {
-    font-size: 18px;
+    font-size: clamp(14px, 2.5vw, 18px);
     opacity: 0.9;
 }
 
-
+/* Navigation */
 nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: clamp(12px, 2vw, 16px);
 }
-
 
 nav a {
     display: block;
     width: 100%;
     max-width: 420px;
-    padding: 18px;
-    font-size: 20px;
+    padding: clamp(12px, 2vw, 18px);
+    font-size: clamp(16px, 2.5vw, 20px);
     font-weight: bold;
     background-color: #24df30;
     color: white;
     text-decoration: none;
-    border-radius: 14px;
+    border-radius: clamp(10px, 2vw, 14px);
     transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -76,40 +73,37 @@ nav a:active {
     transform: scale(0.97);
 }
 
-
+/* Cards */
 .card {
     background-color: rgba(0,0,0,0.25);
-    padding: 22px;
-    border-radius: 15px;
-    margin-top: 20px;
+    padding: clamp(16px, 2vw, 22px);
+    border-radius: clamp(12px, 2vw, 15px);
+    margin-top: clamp(15px, 2vw, 20px);
 }
 
-
-button {
+/* Buttons and form elements */
+button, select, input, textarea {
     width: 100%;
-    padding: 18px;
-    font-size: 18px;
-    border-radius: 12px;
+    padding: clamp(12px, 2vw, 18px);
+    font-size: clamp(14px, 2vw, 18px);
+    border-radius: clamp(10px, 2vw, 12px);
     border: none;
-    background-color: #ff66c4;
-    color: white;
     cursor: pointer;
 }
 
+button {
+    background-color: #ff66c4;
+    color: white;
+}
 
 select, input, textarea {
-    width: 100%;
-    padding: 16px;
-    font-size: 18px;
-    margin-top: 10px;
-    border-radius: 12px;
-    border: none;
+    margin-top: clamp(8px, 1vw, 10px);
     box-sizing: border-box;
 }
 
-
+/* Stars */
 .stars span {
-    font-size: 40px;
+    font-size: clamp(24px, 5vw, 40px);
     cursor: pointer;
     color: gray;
 }
@@ -118,7 +112,7 @@ select, input, textarea {
     color: gold;
 }
 
-
+/* Animation */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
