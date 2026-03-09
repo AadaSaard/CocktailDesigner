@@ -90,7 +90,7 @@ select, input, textarea {
     to {opacity: 1;}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
     body {
         background: #ff66c4;
     }
@@ -98,4 +98,5 @@ select, input, textarea {
         display: inline-block;
         width: 200px;
     }
+
 }
