@@ -8,21 +8,22 @@ body {
     background: #ff66c4;
     color: white;
     text-align: center;
+    font-size: 20px; /* kasvattaa kaiken tekstin */
 }
 
 header {
-    padding: 20px;
+    padding: 25px 15px;
 }
 
 h1 {
     font-family: 'Homemade Apple', cursive;
-    font-size: 38px;
-    margin-bottom: 10px;
+    font-size: 42px;
+    margin: 10px 0;
 }
 
 h2 {
     font-family: 'Belleza', sans-serif;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 nav {
@@ -31,16 +32,19 @@ nav {
     box-sizing: border-box;
 }
 
+/* SUURET NAVIGAATIONAPIT */
+
 nav a {
     display: block;
     width: 100%;
-    padding: 18px;
-    margin: 12px 0;
-    font-size: 20px;
+    padding: 22px;
+    margin: 14px 0;
+    font-size: 24px;
+    font-weight: bold;
     background-color: #24df30;
     color: white;
     text-decoration: none;
-    border-radius: 14px;
+    border-radius: 16px;
 }
 
 nav a:active {
@@ -49,37 +53,33 @@ nav a:active {
 
 .card {
     margin: 15px;
-    padding: 20px;
-    font-size: 18px;
+    padding: 25px;
+    font-size: 20px;
     background-color: rgba(0,0,0,0.25);
     border-radius: 15px;
 }
 
 button {
     width: 100%;
-    padding: 18px;
-    font-size: 18px;
-    border-radius: 12px;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 14px;
     border: none;
     background-color: #ff66c4;
 }
 
 select, input, textarea {
     width: 100%;
-    padding: 16px;
-    font-size: 18px;
-    margin: 10px 0;
+    padding: 18px;
+    font-size: 20px;
+    margin: 12px 0;
     border-radius: 12px;
     border: none;
     box-sizing: border-box;
 }
 
 .stars span {
-    font-size: 40px;
-}
-
-.stars .active {
-    color: gold;
+    font-size: 45px;
 }
 
 /* TABLET */
@@ -92,7 +92,7 @@ select, input, textarea {
     }
 
     nav a {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .card {
@@ -108,8 +108,9 @@ select, input, textarea {
 
     nav a {
         display: inline-block;
-        width: 220px;
+        width: 230px;
         margin: 10px;
     }
 
 }
+
