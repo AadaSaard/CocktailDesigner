@@ -1,163 +1,224 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Belleza&family=Neuton:wght@400;700&display=swap');
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+    --bg-color:#ff66c4;
+    --accent:#24df30;
+    --accent-hover:#1bb826;
+    --card-bg:rgba(0,0,0,0.25);
+    --text-color:#ffffff;
 }
 
-body {
-    font-family: 'Neuton', serif;
-    background: #ff66c4;
-    color: white;
-    text-align: center;
+/* =========================
+   BASE
+========================= */
+
+*{
+    box-sizing:border-box;
 }
 
-/* Fluid container padding */
-.container {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: clamp(20px, 3vw, 40px) clamp(15px, 2vw, 20px);
+html, body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
 }
 
-/* Headers */
-header {
-    margin-bottom: clamp(25px, 3vw, 35px);
+body{
+    font-family:'Neuton', serif;
+    background:var(--bg-color);
+    color:var(--text-color);
+    text-align:center;
+    line-height:1.6;
 }
 
-h1 {
-    font-family: 'Homemade Apple', cursive;
-    font-size: clamp(28px, 6vw, 42px);
-    margin-bottom: clamp(10px, 1.5vw, 15px);
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:clamp(20px,3vw,40px);
 }
 
-h2 {
-    font-family: 'Belleza', sans-serif;
-    font-size: clamp(18px, 4vw, 26px);
-    margin-bottom: clamp(8px, 1vw, 10px);
+/* =========================
+   HEADER
+========================= */
+
+header{
+    margin-bottom:clamp(25px,3vw,35px);
 }
 
-header p {
-    font-size: clamp(14px, 2.5vw, 18px);
-    opacity: 0.9;
+h1{
+    font-family:'Homemade Apple', cursive;
+    font-size:clamp(28px,6vw,42px);
+    margin-bottom:10px;
 }
 
-/* Navigation */
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(12px, 2vw, 16px);
+h2{
+    font-family:'Belleza', sans-serif;
+    font-size:clamp(18px,4vw,26px);
+    margin-bottom:10px;
 }
 
-nav a {
-    display: block;
-    width: 100%;
-    max-width: 420px;
-    padding: clamp(12px, 2vw, 18px);
-    font-size: clamp(16px, 2.5vw, 20px);
-    font-weight: bold;
-    background-color: #24df30;
-    color: white;
-    text-decoration: none;
-    border-radius: clamp(10px, 2vw, 14px);
-    transition: transform 0.2s, background-color 0.2s;
+header p{
+    font-size:clamp(14px,2.5vw,18px);
+    opacity:.9;
 }
 
-nav a:hover {
-    background-color: #1bb826;
-    transform: scale(1.03);
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
 }
 
-nav a:active {
-    transform: scale(0.97);
+nav a{
+    display:block;
+    width:100%;
+    max-width:420px;
+
+    padding:16px;
+    font-size:clamp(16px,2.5vw,20px);
+    font-weight:bold;
+
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+
+    border-radius:14px;
+
+    transition:
+        transform .2s ease,
+        background-color .2s ease,
+        box-shadow .2s ease;
 }
 
-/* Cards */
-.card {
-    background-color: rgba(0,0,0,0.25);
-    padding: clamp(16px, 2vw, 22px);
-    border-radius: clamp(12px, 2vw, 15px);
-    margin-top: clamp(15px, 2vw, 20px);
+nav a:hover{
+    background:var(--accent-hover);
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
 }
 
-/* Buttons and form elements */
-button, select, input, textarea {
-    width: 100%;
-    padding: clamp(12px, 2vw, 18px);
-    font-size: clamp(14px, 2vw, 18px);
-    border-radius: clamp(10px, 2vw, 12px);
-    border: none;
-    cursor: pointer;
+nav a:active{
+    transform:scale(.97);
 }
 
-button {
-    background-color: #ff66c4;
-    color: white;
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    background:var(--card-bg);
+    padding:clamp(18px,2vw,24px);
+    border-radius:14px;
+    margin-top:20px;
+
+    backdrop-filter:blur(6px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+
+    animation:fadeIn .5s ease;
 }
 
-select, input, textarea {
-    margin-top: clamp(8px, 1vw, 10px);
-    box-sizing: border-box;
+/* =========================
+   FORMS
+========================= */
+
+button,
+select,
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    font-size:16px;
+
+    border-radius:12px;
+    border:none;
+
+    margin-top:10px;
 }
 
-/* Stars */
-.stars span {
-    font-size: clamp(24px, 5vw, 40px);
-    cursor: pointer;
-    color: gray;
+button{
+    background:var(--bg-color);
+    color:white;
+    font-weight:bold;
+
+    transition:transform .15s ease, opacity .15s ease;
 }
 
-.stars .active {
-    color: gold;
+button:hover{
+    opacity:.9;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+button:active{
+    transform:scale(.97);
 }
 
-/* ================================================= */
-/* Suurelle ruudulle (>1200px) pienennetään elementtejä */
-/* ================================================= */
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 900px;
-        padding: clamp(15px, 1.5vw, 30px) clamp(10px, 1vw, 15px);
+/* =========================
+   STARS
+========================= */
+
+.stars span{
+    font-size:clamp(24px,5vw,40px);
+    cursor:pointer;
+    color:gray;
+    transition:transform .15s;
+}
+
+.stars span:hover{
+    transform:scale(1.2);
+}
+
+.stars .active{
+    color:gold;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media (min-width:1200px){
+
+    .container{
+        max-width:900px;
     }
 
-    h1 {
-        font-size: clamp(28px, 3vw, 36px);
+    h1{
+        font-size:36px;
     }
 
-    h2 {
-        font-size: clamp(18px, 2vw, 22px);
+    h2{
+        font-size:22px;
     }
 
-    header p {
-        font-size: clamp(14px, 1.5vw, 16px);
+    nav a{
+        font-size:18px;
     }
 
-    nav a {
-        padding: clamp(10px, 1vw, 14px);
-        font-size: clamp(14px, 1.5vw, 18px);
-        border-radius: clamp(8px, 1vw, 12px);
+    .stars span{
+        font-size:32px;
     }
 
-    .card {
-        padding: clamp(14px, 1.5vw, 18px);
-        border-radius: clamp(10px, 1vw, 12px);
-        margin-top: clamp(12px, 1vw, 16px);
-    }
-
-    button, select, input, textarea {
-        padding: clamp(10px, 1vw, 14px);
-        font-size: clamp(14px, 1.5vw, 16px);
-        border-radius: clamp(8px, 1vw, 10px);
-    }
-
-    .stars span {
-        font-size: clamp(24px, 3vw, 32px);
-    }
 }
