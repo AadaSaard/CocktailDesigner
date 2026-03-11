@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Belleza&family=Neuton:wght@400;700&display=swap');
 
-/* =========================
-   VARIABLES
-========================= */
-
 :root{
     --bg-color:#ff66c4;
     --accent:#24df30;
@@ -11,10 +7,6 @@
     --card-bg:rgba(0,0,0,0.25);
     --text-color:#ffffff;
 }
-
-/* =========================
-   BASE
-========================= */
 
 *{
     box-sizing:border-box;
@@ -34,19 +26,11 @@ body{
     line-height:1.6;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .container{
     max-width:900px;
     margin:auto;
     padding:clamp(20px,3vw,40px);
 }
-
-/* =========================
-   HEADER
-========================= */
 
 header{
     margin-bottom:clamp(25px,3vw,35px);
@@ -69,9 +53,6 @@ header p{
     opacity:.9;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
 
 nav{
     display:flex;
@@ -111,10 +92,6 @@ nav a:active{
     transform:scale(.97);
 }
 
-/* =========================
-   CARDS
-========================= */
-
 .card{
     background:var(--card-bg);
     padding:clamp(18px,2vw,24px);
@@ -127,9 +104,6 @@ nav a:active{
     animation:fadeIn .5s ease;
 }
 
-/* =========================
-   FORMS
-========================= */
 
 button,
 select,
@@ -161,9 +135,6 @@ button:active{
     transform:scale(.97);
 }
 
-/* =========================
-   STARS
-========================= */
 
 .stars span{
     font-size:clamp(24px,5vw,40px);
@@ -195,9 +166,6 @@ button:active{
     }
 }
 
-/* =========================
-   LARGE SCREENS
-========================= */
 
 @media (min-width:1200px){
 
@@ -222,3 +190,4 @@ button:active{
     }
 
 }
+
